@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardContainer from "./card";
+import CardContainer from "../components/card";
 
 import { createUser } from "../api/api";
 

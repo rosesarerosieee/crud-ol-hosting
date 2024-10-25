@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { deleteUser } from "../api/api";
-import CardContainer from "./card";
+import CardContainer from "../components/card";
 
 const DeleteUser = () => {
   const [id, setId] = useState("");

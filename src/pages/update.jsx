@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { updateUser } from "../api/api";
-import CardContainer from "./card";
+import CardContainer from "../components/card";
 
 const UpdateUser = () => {
   const [id, setId] = useState("");
