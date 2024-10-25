@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -7,13 +8,10 @@ app.use(express.json());
 app.use(cors());
 
 mongoose
-  .connect(
-    "mongodb+srv://perezrose0211:chanchan0205@crudol.llly5.mongodb.net/?retryWrites=true&w=majority&appName=CRUDOL",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.DATABASE_KEY, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connected to the database"))
   .catch((er) => console.log(er));
 
